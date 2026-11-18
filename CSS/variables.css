@@ -1,0 +1,7 @@
+:root {
+    --primary-bg-color: rgb(26, 38, 48);
+    --secondary-bg-color: rgb(36, 52, 63);
+    --text-color: rgb(233, 224, 208);
+    --action-color: rgb(169, 184, 151);
+    --highlight-color: rgb(199, 171, 120);
+}
