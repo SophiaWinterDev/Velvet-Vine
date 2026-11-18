@@ -1,0 +1,36 @@
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    min-height: 100dvh;
+}
+
+header, footer {
+    background-color: rgb(19, 28, 36);
+    padding: 20px 100px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > img {
+    width: 96px;
+}
+
+.menu-button {
+    width: 28px;
+    height: 28px;
+    background-image: url(../assets/icon/menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    flex: 1;
+}
