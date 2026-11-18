@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.main-padding {
+    padding: 20px 100px;
+}
+
 body {
     background-color: var(--primary-bg-color);
     min-height: 100dvh;
@@ -10,7 +14,6 @@ body {
 
 header, footer {
     background-color: rgb(19, 28, 36);
-    padding: 20px 100px;
 }
 
 header {
@@ -33,6 +36,7 @@ header > img {
 
 main {
     flex: 1;
+    gap: 40px;
 }
 
 .landing-section {
@@ -95,4 +99,42 @@ h1 {
 .reviews img {
     width: 18px;
     height: 18px;
+}
+
+.dish-section {
+    gap: 20px;
+}
+
+.dish {
+    display: flex;
+    background-color: var(--secondary-bg-color);
+    padding: 16px;
+    border-radius: 20px;
+    gap: 15px;
+}
+
+.dish > img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+h2, .price-div > p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.dish-description > p {
+    font-weight: 500;
+}
+
+.price-div {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.price-div > button {
+    color: var(--primary-bg-color);
+    background-color: var(--action-color);
+    padding: 5px 15px;
+    border-radius: 20px;
 }
