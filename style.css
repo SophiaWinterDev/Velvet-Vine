@@ -2,6 +2,8 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    color: var(--text-color);
+    font-family: var(--font-pala);
 }
 
 button {
