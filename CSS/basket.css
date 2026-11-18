@@ -1,0 +1,30 @@
+.basket-section {
+    max-width: 30%;
+    padding: 20px 0;
+}
+
+.basket {
+    align-items: center;
+    gap: 40px;
+    min-height: 750px;
+    background-color: var(--secondary-bg-color);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 60px 30px;
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+.basket > img {
+    width: 120px;
+}
+
+.basket > h2 {
+    font-size: 32px;
+}
+
+.basket > p {
+    font-weight: 500;
+    font-size: 24px;
+}
