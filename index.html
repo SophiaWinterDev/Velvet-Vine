@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="./CSS/main.css" />
         <link rel="stylesheet" href="./CSS/basket.css" />
         <link rel="stylesheet" href="./CSS/media-queries.css" />
+        <link rel="stylesheet" href="./CSS/media-queries-basket.css" />
         <script defer src="./JS/dishes.js"></script>
         <script defer src="./JS/templates.js"></script>
         <script defer src="./script.js"></script>
@@ -35,17 +36,19 @@
                     alt="Logo"
                 />
                 <img class="logo-img" src="./assets/icon/logo.png" alt="Logo" />
-                <div class="headline-div">
-                    <h1>Velvet & Vine</h1>
-                    <div class="reviews">
-                        <img
-                            src="./assets/icon/review-star.png"
-                            alt="Star-Icon"
-                        />
-                        <p>4,3 <span>(397)</span></p>
+                <div class="landing-text">
+                    <div class="headline-div">
+                        <h1>Velvet & Vine</h1>
+                        <div class="reviews">
+                            <img
+                                src="./assets/icon/review-star.png"
+                                alt="Star-Icon"
+                            />
+                            <p>4,3 <span>(397)</span></p>
+                        </div>
                     </div>
+                    <p>A little taste of Italy, wherever you are.</p>
                 </div>
-                <p>A little taste of Italy, wherever you are.</p>
             </section>
             <section class="menu-section">
                 <section class="dish-section column main-padding">
@@ -54,33 +57,18 @@
                             src="./assets/img/burrata-roasted-tomatoes.jpg"
                             alt="Dish with burrata and roasted tomatoes"
                         />
-                        <div class="dish-description">
-                            <h2>Burrata & Roasted Tomatoes</h2>
-                            <p>
-                                Creamy burrata, roasted tomatoes, basil and
-                                olive oil.
-                            </p>
-                        </div>
-                        <div class="price-div column">
-                            <p>12,90 €</p>
-                            <button>Add to basket</button>
-                        </div>
-                    </div>
-                    <div class="dish">
-                        <img
-                            src="./assets/img/burrata-roasted-tomatoes.jpg"
-                            alt="Dish with burrata and roasted tomatoes"
-                        />
-                        <div class="dish-description">
-                            <h2>Burrata & Roasted Tomatoes</h2>
-                            <p>
-                                Creamy burrata, roasted tomatoes, basil and
-                                olive oil.
-                            </p>
-                        </div>
-                        <div class="price-div column">
-                            <p>12,90 €</p>
-                            <button>Add to basket</button>
+                        <div class="dish-content">
+                            <div class="dish-description">
+                                <h2>Burrata & Roasted Tomatoes</h2>
+                                <p>
+                                    Creamy burrata, roasted tomatoes, basil and
+                                    olive oil.
+                                </p>
+                            </div>
+                            <div class="price-div column">
+                                <p>12,90 €</p>
+                                <button>Add to basket</button>
+                            </div>
                         </div>
                     </div>
                     <div class="dish">
@@ -88,21 +76,42 @@
                             src="./assets/img/burrata-roasted-tomatoes.jpg"
                             alt="Dish with burrata and roasted tomatoes"
                         />
-                        <div class="dish-description">
-                            <h2>Burrata & Roasted Tomatoes</h2>
-                            <p>
-                                Creamy burrata, roasted tomatoes, basil and
-                                olive oil.
-                            </p>
+                        <div class="dish-content">
+                            <div class="dish-description">
+                                <h2>Burrata & Roasted Tomatoes</h2>
+                                <p>
+                                    Creamy burrata, roasted tomatoes, basil and
+                                    olive oil.
+                                </p>
+                            </div>
+                            <div class="price-div column">
+                                <p>12,90 €</p>
+                                <button>Add to basket</button>
+                            </div>
                         </div>
-                        <div class="price-div column">
-                            <p>12,90 €</p>
-                            <button>Add to basket</button>
+                    </div>
+                    <div class="dish">
+                        <img
+                            src="./assets/img/burrata-roasted-tomatoes.jpg"
+                            alt="Dish with burrata and roasted tomatoes"
+                        />
+                        <div class="dish-content">
+                            <div class="dish-description">
+                                <h2>Burrata & Roasted Tomatoes</h2>
+                                <p>
+                                    Creamy burrata, roasted tomatoes, basil and
+                                    olive oil.
+                                </p>
+                            </div>
+                            <div class="price-div column">
+                                <p>12,90 €</p>
+                                <button>Add to basket</button>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <section class="basket-section">
-                    <div class="basket column">
+                    <div class="basket column d-none">
                         <h2>Your Basket</h2>
                         <p>
                             Nothing here yet.<br />Go ahead and choose something

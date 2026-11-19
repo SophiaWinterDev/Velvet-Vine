@@ -1,0 +1,32 @@
+@media screen and (max-width: 999px) {
+    .menu-section {
+        align-items: center;
+    }
+
+    .basket {
+        position: fixed;
+        bottom: 68px;
+        left: 15%;
+        right: 15%;
+        top: 50px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px;
+        min-height: auto;
+        padding: 20px 30px;
+    }
+
+    .basket > img {
+        width: 100px;
+    }
+
+    .d-none {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .basket {
+        left: 0;
+        right: 0;
+    }
+}

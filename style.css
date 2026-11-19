@@ -9,4 +9,5 @@
 button {
     all: unset;
     cursor: pointer;
+    text-align: center;
 }

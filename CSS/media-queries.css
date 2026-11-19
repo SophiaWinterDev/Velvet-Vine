@@ -1,16 +1,26 @@
-@media screen and (max-width: 768px) {
-    .dish {
-        flex-direction: column;
+@media screen and (min-width: 1000px) and (max-width: 1279px) {
+    .main-padding {
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .main-padding {
+        padding: 20px 60px;
     }
 
-    .dish > img {
+    header > button {
+        display: none;
+    }
+
+    .dish-section {
         width: 100%;
-        height: 100px;
-        object-fit: cover;
-    }
-
-    .price-div {
-        flex-direction: row;
     }
 
     footer {
@@ -102,8 +112,38 @@
     }
 }
 
-@media screen and (min-width: 769px) {
-    nav {
-        display: none;
+@media screen and (max-width: 768px) {
+    .dish,
+    .dish-content {
+        flex-direction: column;
+    }
+
+    .dish > img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .price-div {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-padding {
+        padding: 20px;
+    }
+
+    .landing-section {
+        padding: 20px 20px 0;
+    }
+
+    .headline-div {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .background-img {
+        border-radius: 15px;
     }
 }
