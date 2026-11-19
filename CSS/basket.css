@@ -6,7 +6,7 @@
 .basket {
     align-items: center;
     gap: 40px;
-    min-height: 750px;
+    height: 750px;
     background-color: var(--secondary-bg-color);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -32,4 +32,120 @@
 .empty-basket > p {
     font-weight: 500;
     font-size: clamp(18px, 3vw, 24px);
+}
+
+.order-list {
+    justify-content: flex-start;
+    list-style-type: none;
+    padding-inline-start: 0;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding-right: 10px;
+    height: 100%;
+    gap: 10px;
+}
+
+.order-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.order-list::-webkit-scrollbar-track {
+    background: var(--secondary-bg-color);
+}
+
+.order-list::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 10px;
+}
+
+.dish-order {
+    background-color: var(--text-color);
+    padding: 16px;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.dish-order button {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.dish-order p {
+    color: var(--primary-bg-color);
+    font-weight: 700;
+    font-size: clamp(20px, 2.5vw, 22px);
+    text-align: start;
+    line-height: 24px;
+    min-width: 0px;
+}
+
+.dish-order-top,
+.dish-order-bottom,
+.dish-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dish-order-top {
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.dish-order-bottom {
+    align-items: flex-end;
+}
+
+.dish-amount {
+    align-items: center;
+    gap: 5px;
+}
+
+.dish-amount button {
+    margin-top: 5px;
+}
+
+.delete-button {
+    background-image: url(../assets/icon/delete.png);
+}
+
+.delete-button:active,
+.delete-button:hover {
+    background-image: url(../assets/icon/delete-active.png);
+    background-color: var(--primary-bg-color);
+    border-radius: 5px;
+}
+
+.bill {
+    width: 100%;
+    gap: 5px;
+}
+
+.subtotal,
+.delivery,
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.subtotal,
+.delivery {
+    font-weight: 600;
+    font-size: clamp(18px, 2.5vw, 20px);
+}
+
+.total {
+    font-weight: 700;
+    font-size: clamp(20px, 2.5vw, 22px);
+}
+
+.buy-button {
+    font-weight: 700;
+    font-size: clamp(22px, 2vw, 32px);
+    color: var(--primary-bg-color);
+    background-color: var(--action-color);
+    padding: 10px 30px;
+    border-radius: 40px;
 }
