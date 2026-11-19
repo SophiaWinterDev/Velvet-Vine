@@ -3,6 +3,10 @@
     .menu-padding {
         padding: 20px max(90px, calc(50% - 720px));
     }
+
+    .dish-section {
+        padding: 0;
+    }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1279px) {
