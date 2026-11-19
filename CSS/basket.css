@@ -16,7 +16,12 @@
     text-align: center;
 }
 
-.basket > img {
+.empty-basket {
+    align-items: center;
+    gap: 40px;
+}
+
+.empty-basket > img {
     width: 120px;
 }
 
@@ -24,7 +29,7 @@
     font-size: clamp(24px, 3vw, 32px);
 }
 
-.basket > p {
+.empty-basket > p {
     font-weight: 500;
     font-size: clamp(18px, 3vw, 24px);
 }
