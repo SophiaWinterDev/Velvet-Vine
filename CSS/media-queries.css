@@ -1,5 +1,13 @@
+@media screen and (min-width: 1441px) {
+    .main-padding,
+    .menu-padding {
+        padding: 20px max(90px, calc(50% - 720px));
+    }
+}
+
 @media screen and (min-width: 1000px) and (max-width: 1279px) {
-    .main-padding {
+    .main-padding,
+    .dish-section {
         padding: 20px 30px;
     }
 }
@@ -11,7 +19,8 @@
 }
 
 @media screen and (max-width: 999px) {
-    .main-padding {
+    .main-padding,
+    .dish-section {
         padding: 20px 60px;
     }
 
@@ -130,7 +139,8 @@
 }
 
 @media screen and (max-width: 480px) {
-    .main-padding {
+    .main-padding,
+    .dish-section {
         padding: 20px;
     }
 

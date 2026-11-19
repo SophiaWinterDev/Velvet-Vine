@@ -3,7 +3,8 @@
     flex-direction: column;
 }
 
-.main-padding {
+.main-padding,
+.dish-section {
     padding: 20px 90px;
 }
 
