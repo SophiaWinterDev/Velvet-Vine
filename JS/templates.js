@@ -14,7 +14,7 @@ function getHTMLForDish(index) {
             </div>
             <div class="price-div column">
                 <p>${dishes[index].price.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
-                <button>Add to basket</button>
+                <button onclick="addDishToBasket(${index})">Add to basket</button>
             </div>
         </div>
     </li>`;
@@ -32,4 +32,54 @@ function getHTMLForEmptyBasket() {
             alt=""
         />
     </li>`;
+}
+
+function getHTMLForDishOrder(index) {
+    return `
+    <li class="dish-order column">
+        <div class="dish-order-top">
+            <p>1 x ${dishes[index].name}</p>
+            <button class="delete-button"></button>
+        </div>
+        <div class="dish-order-bottom">
+            <div class="dish-amount">
+                <button>
+                    <img
+                        src="./assets/icon/remove.png"
+                        alt="Remove-Icon"
+                    />
+                </button>
+                <p>1</p>
+                <button>
+                    <img
+                        src="./assets/icon/add.png"
+                        alt="Add-Icon"
+                    />
+                </button>
+            </div>
+            <p>${dishes[index].price.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
+        </div>
+    </li>`;
+}
+
+function getHTMLForSummary() {
+    return `
+    <ul class="bill column">
+        <li class="subtotal">
+            <p>Subtotal</p>
+            <p>${calculateSubtotal().toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
+        </li>
+        <li class="delivery">
+            <p>Delivery fee</p>
+            <p>${deliveryFee.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
+        </li>
+        <hr />
+        <li class="total">
+            <p>Total</p>
+            <p>${calculateTotal().toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
+        </li>
+    </ul>
+    <button class="buy-button">
+        Buy now (${calculateTotal().toLocaleString("de-DE", { style: "currency", currency: "EUR" })})
+    </button>`;
 }

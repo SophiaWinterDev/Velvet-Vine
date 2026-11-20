@@ -3,6 +3,7 @@ let dishes = [
         "name": "Burrata & Roasted Tomatoes",
         "category": "Starters",
         "price": 12.9,
+        "amount": 0,
         "description": "Creamy burrata, roasted tomatoes, basil and olive oil.",
         "img": [
             {
@@ -15,6 +16,7 @@ let dishes = [
         "name": "Wild Mushroom Arancini",
         "category": "Starters",
         "price": 8.9,
+        "amount": 0,
         "description":
             "Crispy risotto balls with mushrooms, mozzarella and truffle aioli.",
         "img": [
@@ -28,6 +30,7 @@ let dishes = [
         "name": "Slow-Braised Beef Ragù",
         "category": "Pasta",
         "price": 16.9,
+        "amount": 0,
         "description": "Pappardelle with red wine beef ragù and Parmesan.",
         "img": [
             {
@@ -40,6 +43,7 @@ let dishes = [
         "name": "Pistachio Pesto Rigatoni",
         "category": "Pasta",
         "price": 15.9,
+        "amount": 0,
         "description": "Rigatoni with basil, pistachio pesto and Pecorino.",
         "img": [
             {
@@ -52,6 +56,7 @@ let dishes = [
         "name": "Lemon Ricotta Ravioli",
         "category": "Pasta",
         "price": 16.9,
+        "amount": 0,
         "description":
             "Ricotta-filled ravioli with lemon, sage butter and Parmesan.",
         "img": [
@@ -65,6 +70,7 @@ let dishes = [
         "name": "Classic Carbonara",
         "category": "Pasta",
         "price": 14.9,
+        "amount": 0,
         "description":
             "Spaghetti with guanciale, egg yolk, Pecorino and black pepper.",
         "img": [
@@ -78,6 +84,7 @@ let dishes = [
         "name": "Margherita Pizza",
         "category": "Pizza",
         "price": 11.9,
+        "amount": 0,
         "description": "Tomato, fior di latte mozzarella, basil and olive oil.",
         "img": [
             {
@@ -90,6 +97,7 @@ let dishes = [
         "name": "Classic Tiramisu",
         "category": "Desserts",
         "price": 7.5,
+        "amount": 0,
         "description":
             "Espresso-soaked ladyfingers, mascarpone cream and cocoa.",
         "img": [
@@ -103,6 +111,7 @@ let dishes = [
         "name": "Vanilla Panna Cotta",
         "category": "Desserts",
         "price": 6.9,
+        "amount": 0,
         "description": "Vanilla panna cotta with a mixed berry compote.",
         "img": [
             {
