@@ -21,7 +21,7 @@
         <script defer src="./JS/templates.js"></script>
         <script defer src="./script.js"></script>
     </head>
-    <body class="column">
+    <body class="column" onload="init()">
         <header class="main-padding">
             <a href="./index.html"
                 ><img src="./assets/icon/logo-name-short.png" alt="Logo V & V"
@@ -51,65 +51,7 @@
                 </div>
             </section>
             <section class="menu-section menu-padding">
-                <section class="dish-section column">
-                    <div class="dish">
-                        <img
-                            src="./assets/img/burrata-roasted-tomatoes.jpg"
-                            alt="Dish with burrata and roasted tomatoes"
-                        />
-                        <div class="dish-content">
-                            <div class="dish-description">
-                                <h2>Burrata & Roasted Tomatoes</h2>
-                                <p>
-                                    Creamy burrata, roasted tomatoes, basil and
-                                    olive oil.
-                                </p>
-                            </div>
-                            <div class="price-div column">
-                                <p>12,90 €</p>
-                                <button>Add to basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dish">
-                        <img
-                            src="./assets/img/burrata-roasted-tomatoes.jpg"
-                            alt="Dish with burrata and roasted tomatoes"
-                        />
-                        <div class="dish-content">
-                            <div class="dish-description">
-                                <h2>Burrata & Roasted Tomatoes</h2>
-                                <p>
-                                    Creamy burrata, roasted tomatoes, basil and
-                                    olive oil.
-                                </p>
-                            </div>
-                            <div class="price-div column">
-                                <p>12,90 €</p>
-                                <button>Add to basket</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dish">
-                        <img
-                            src="./assets/img/burrata-roasted-tomatoes.jpg"
-                            alt="Dish with burrata and roasted tomatoes"
-                        />
-                        <div class="dish-content">
-                            <div class="dish-description">
-                                <h2>Burrata & Roasted Tomatoes</h2>
-                                <p>
-                                    Creamy burrata, roasted tomatoes, basil and
-                                    olive oil.
-                                </p>
-                            </div>
-                            <div class="price-div column">
-                                <p>12,90 €</p>
-                                <button>Add to basket</button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <section id="dishSection" class="dish-section column"></section>
                 <section class="basket-section">
                     <div class="basket column d-none">
                         <h2>Your Basket</h2>
