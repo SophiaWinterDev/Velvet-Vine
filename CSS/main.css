@@ -109,7 +109,7 @@ h1 {
     justify-content: space-between;
 }
 
-.dish-section {
+.dish-list {
     gap: 20px;
 }
 
@@ -146,6 +146,7 @@ h1 {
 .price-div {
     justify-content: space-between;
     align-items: flex-end;
+    min-width: 115px;
 }
 
 .price-div > button {

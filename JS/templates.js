@@ -1,6 +1,6 @@
 function getHTMLForDish(index) {
     return `
-    <div class="dish">
+    <li class="dish">
         <img
             src="./assets/img/${dishes[index].img[0].src}"
             alt="${dishes[index].img[0].alt}"
@@ -17,5 +17,19 @@ function getHTMLForDish(index) {
                 <button>Add to basket</button>
             </div>
         </div>
-    </div>`;
+    </li>`;
+}
+
+function getHTMLForEmptyBasket() {
+    return `
+    <li class="empty-basket column">
+        <p>
+            Nothing here yet.<br />Go ahead and choose
+            something delicious.
+        </p>
+        <img
+            src="./assets/icon/cart-large.png"
+            alt=""
+        />
+    </li>`;
 }

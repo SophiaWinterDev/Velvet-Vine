@@ -51,21 +51,13 @@
                 </div>
             </section>
             <section class="menu-section menu-padding">
-                <section id="dishSection" class="dish-section column"></section>
+                <section class="dish-section">
+                    <ul id="dishList" class="dish-list column"></ul>
+                </section>
                 <section class="basket-section">
                     <div class="basket column d-none">
                         <h2>Your Basket</h2>
-                        <!-- <div class="empty-basket column">
-                            <p>
-                                Nothing here yet.<br />Go ahead and choose
-                                something delicious.
-                            </p>
-                            <img
-                                src="./assets/icon/cart-large.png"
-                                alt="Basket-icon"
-                            />
-                        </div> -->
-                        <ul class="order-list column">
+                        <ul id="basketContent" class="order-list column">
                             <li class="dish-order column">
                                 <div class="dish-order-top">
                                     <p>1 x Burrata & Roasted Tomatoes</p>
@@ -139,22 +131,26 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="bill column">
-                            <div class="subtotal">
-                                <p>Subtotal</p>
-                                <p>36,70 €</p>
-                            </div>
-                            <div class="delivery">
-                                <p>Delivery fee</p>
-                                <p>2,99 €</p>
-                            </div>
-                            <hr />
-                            <div class="total">
-                                <p>Total</p>
-                                <p>41,69 €</p>
-                            </div>
+                        <div id="basketSummary" class="basket-summary column">
+                            <ul class="bill column">
+                                <li class="subtotal">
+                                    <p>Subtotal</p>
+                                    <p>36,70 €</p>
+                                </li>
+                                <li class="delivery">
+                                    <p>Delivery fee</p>
+                                    <p>2,99 €</p>
+                                </li>
+                                <hr />
+                                <li class="total">
+                                    <p>Total</p>
+                                    <p>41,69 €</p>
+                                </li>
+                            </ul>
+                            <button class="buy-button">
+                                Buy now (41,69 €)
+                            </button>
                         </div>
-                        <button class="buy-button">Buy now (41,69 €)</button>
                     </div>
                 </section>
             </section>
@@ -167,10 +163,10 @@
                     alt="Logo Velvet & Vine"
                 />
             </div>
-            <div class="footer-links">
-                <a href="./HTML/imprint.html">Imprint</a>
-                <a href="">Cookie Preferences</a>
-            </div>
+            <ul class="footer-links">
+                <li><a href="./HTML/imprint.html">Imprint</a></li>
+                <li><a href="">Cookie Preferences</a></li>
+            </ul>
         </footer>
         <nav>
             <ul>

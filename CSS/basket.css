@@ -36,8 +36,6 @@
 
 .order-list {
     justify-content: flex-start;
-    list-style-type: none;
-    padding-inline-start: 0;
     flex: 1;
     overflow-y: auto;
     min-height: 0;
@@ -115,6 +113,10 @@
     background-image: url(../assets/icon/delete-active.png);
     background-color: var(--primary-bg-color);
     border-radius: 5px;
+}
+
+.basket-summary {
+    gap: 40px;
 }
 
 .bill {
