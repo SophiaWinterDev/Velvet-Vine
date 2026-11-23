@@ -51,19 +51,26 @@ function clearBasket() {
 
 function addDishToBasket(index) {
     dishes[index].amount++;
-    document.getElementById(`addDishButton-${index}`).innerText = `Added ${dishes[index].amount}`
+    document.getElementById(`addDishButton-${index}`).innerHTML =
+        getHTMLForAddButton(index);
     renderBasket();
 }
 
 function deleteDishFromBasket(index) {
     dishes[index].amount = 0;
-    document.getElementById(`addDishButton-${index}`).innerText = `Add to basket`
+    document.getElementById(`addDishButton-${index}`).innerText =
+        getTextForAddButton();
     renderBasket();
 }
 
 function decreaseAmount(index) {
     dishes[index].amount--;
-    document.getElementById(`addDishButton-${index}`).innerText = `Added ${dishes[index].amount}`
+    document.getElementById(`addDishButton-${index}`).innerHTML =
+        getHTMLForAddButton(index);
+    if (dishes[index].amount === 0) {
+        document.getElementById(`addDishButton-${index}`).innerText =
+            getTextForAddButton();
+    }
     renderBasket();
 }
 
@@ -139,7 +146,7 @@ function unlockScroll() {
 
 function checkWindowWidth() {
     if (window.innerWidth >= 1000) {
-        closeDialog();
+        closeBasketDialog();
     }
 }
 // #endregion

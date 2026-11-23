@@ -83,3 +83,11 @@ function getHTMLForSummary() {
         Buy now (${calculateTotal().toLocaleString("de-DE", { style: "currency", currency: "EUR" })})
     </button>`;
 }
+
+function getHTMLForAddButton(index) {
+    return `<b>Added ${dishes[index].amount}<b>`;
+}
+
+function getTextForAddButton() {
+    return `Add to basket`;
+}

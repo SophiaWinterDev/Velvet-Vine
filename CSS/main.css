@@ -147,7 +147,7 @@ h1 {
 .price-div {
     justify-content: space-between;
     align-items: flex-end;
-    min-width: 115px;
+    min-width: 120px;
 }
 
 .price-div > button {
@@ -155,6 +155,16 @@ h1 {
     background-color: var(--action-color);
     padding: 5px 10px;
     border-radius: 20px;
+    width: 100%;
+}
+
+.price-div > button:hover {
+    box-shadow: 1px 2px 2px rgb(169, 184, 151, 0.4);
+    font-weight: 700;
+}
+
+.price-div b {
+    color: var(--primary-bg-color);
 }
 
 footer {

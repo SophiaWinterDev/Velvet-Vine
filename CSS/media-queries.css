@@ -169,6 +169,10 @@
     .price-div {
         flex-direction: row;
     }
+
+    .price-div button {
+        width: 100px;
+    }
 }
 
 @media screen and (max-width: 480px) {
