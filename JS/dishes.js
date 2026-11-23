@@ -120,4 +120,59 @@ let dishes = [
             },
         ],
     },
+    {
+        "name": "Garlic & Rosemary Focaccia",
+        "category": "Starters",
+        "price": 6.9,
+        "amount": 0,
+        "description":
+            "Warm focaccia with roasted garlic, rosemary, sea salt and olive oil.",
+        "img": [
+            {
+                "src": "garlic-rosemary-focaccia.jpg",
+                "alt": "Golden focaccia with rosemary and roasted garlic on a dark board.",
+            },
+        ],
+    },
+    {
+        "name": "Mushroom & Basil Pizza",
+        "category": "Pizza",
+        "price": 14.5,
+        "amount": 0,
+        "description": "Tomato, mozzarella, mushrooms, basil and Parmesan.",
+        "img": [
+            {
+                "src": "mushroom-basil-pizza.jpg",
+                "alt": "Mushroom pizza with basil and grated Parmesan on a wooden board.",
+            },
+        ],
+    },
+    {
+        "name": "Rocket & Olive Pizza",
+        "category": "Pizza",
+        "price": 15.9,
+        "amount": 0,
+        "description":
+            "Tomato, mozzarella, rocket, black olives, pine nuts and Parmesan.",
+        "img": [
+            {
+                "src": "rocket-olive-pizza.jpg",
+                "alt": "Pizza with rocket, black olives and grated cheese on a white plate.",
+            },
+        ],
+    },
+    {
+        "name": "Chocolate-Drizzled Cannoli",
+        "category": "Desserts",
+        "price": 7.5,
+        "amount": 0,
+        "description":
+            "Crisp pastry shell filled with sweet ricotta cream and drizzled with chocolate.",
+        "img": [
+            {
+                "src": "chocolate-drizzled-cannoli.jpg",
+                "alt": "Cannoli filled with cream and drizzled with chocolate on a plate.",
+            },
+        ],
+    },
 ];
