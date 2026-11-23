@@ -44,16 +44,19 @@ function showEmptyBasket() {
 function addDishToBasket(index) {
     dishes[index].amount++;
     renderBasket();
+    calculateCartAmount(index);
 }
 
 function deleteDishFromBasket(index) {
     dishes[index].amount = 0;
     renderBasket();
+    calculateCartAmount(index);
 }
 
 function decreaseAmount(index) {
     dishes[index].amount--;
     renderBasket();
+    calculateCartAmount(index);
 }
 
 function calculateDishPrices(index) {
@@ -78,6 +81,14 @@ function calculateTotal() {
     return sum;
 }
 
+function calculateCartAmount(index) {
+    let amount = 0;
+    amount += dishes[index].amount;
+    document.getElementById("cartAmountBubble").innerText = "";
+    document.getElementById("cartAmountBubble").innerText = amount;
+}
+
+// #region Dialog
 function openDialog() {
     document.getElementById("basket-dialog").showModal();
     lockScroll();
@@ -109,3 +120,4 @@ function checkWindowWidth() {
         closeDialog();
     }
 }
+// #endregion

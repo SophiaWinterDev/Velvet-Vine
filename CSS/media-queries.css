@@ -52,7 +52,7 @@
 
     nav {
         background-color: var(--action-color);
-        padding: 20px 0;
+        padding: 10px 0 5px;
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -122,6 +122,35 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    nav li {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cart-button-wrapper {
+        position: relative;
+    }
+
+    .cart-button-wrapper > p {
+        text-align: center;
+        position: absolute;
+        min-width: 25px;
+        min-height: 25px;
+        top: 0;
+        right: 0;
+        line-height: 15px;
+        background-color: var(--primary-bg-color);
+        padding: 3px;
+        border-radius: 50%;
     }
 }
 
