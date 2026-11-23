@@ -4,6 +4,10 @@
         padding: 20px max(90px, calc(50% - 720px));
     }
 
+    .menu-section {
+        gap: 20px;
+    }
+
     .dish-section {
         padding: 0;
     }

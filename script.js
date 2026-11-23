@@ -1,18 +1,32 @@
-const DISH_LIST_REF = document.getElementById("dishList");
 const BASKET_CONTENT_REF = document.getElementById("basketContent");
 const BASKET_SUMMARY_REF = document.getElementById("basketSummary");
 let deliveryFee = 2.99;
+let categories = [];
 
 function init() {
+    renderCategories();
     renderDishes();
     renderBasket();
     window.addEventListener("resize", checkWindowWidth);
 }
 
-function renderDishes() {
-    DISH_LIST_REF.innerHTML = "";
+function renderCategories() {
+    document.getElementById("dishSection").innerHTML = "";
     for (let index = 0; index < dishes.length; index++) {
-        DISH_LIST_REF.innerHTML += getHTMLForDish(index);
+        let category = dishes[index].category;
+        if (!categories.includes(category)) {
+            categories.push(category);
+            document.getElementById("dishSection").innerHTML +=
+                getHTMLForCategories(category);
+        }
+    }
+}
+
+function renderDishes() {
+    for (let index = 0; index < dishes.length; index++) {
+        let category = dishes[index].category;
+        document.getElementById(`dishList-${category}`).innerHTML +=
+            getHTMLForDish(index);
     }
 }
 

@@ -5,6 +5,9 @@
 }
 
 @media screen and (min-width: 1000px) {
+    .basket-section {
+        margin-top: 128px;
+    }
     .basket {
         display: flex;
         flex-direction: column;
@@ -17,6 +20,10 @@
 @media screen and (max-width: 999px) {
     .menu-section {
         align-items: center;
+    }
+
+    .basket-section {
+        width: 0;
     }
 
     dialog::backdrop {
@@ -58,6 +65,13 @@
         padding: 20px 30px;
         margin: 0;
         width: 70%;
+    }
+
+    .basket[open] {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-between;
     }
 
     .empty-basket > img {

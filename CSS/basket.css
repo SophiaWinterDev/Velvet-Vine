@@ -28,7 +28,7 @@
     width: 120px;
 }
 
-.basket > h2 {
+.basket h3 {
     font-size: clamp(24px, 3vw, 32px);
 }
 

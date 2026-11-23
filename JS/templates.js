@@ -7,7 +7,7 @@ function getHTMLForDish(index) {
         />
         <div class="dish-content">
             <div class="dish-description">
-                <h2>${dishes[index].name}</h2>
+                <h3>${dishes[index].name}</h3>
                 <p>
                     ${dishes[index].description}
                 </p>
@@ -90,4 +90,15 @@ function getHTMLForAddButton(index) {
 
 function getTextForAddButton() {
     return `Add to basket`;
+}
+
+function getHTMLForCategories(category) {
+    return `
+    <section class="category-${category} category-section column">
+        <div class="category-header">
+            <img src="./assets/icon/${category}.png" alt="">
+            <h2>${category}</h2>
+        </div>
+        <ul id="dishList-${category}" class="dish-list column"></ul>
+    </section>`;
 }

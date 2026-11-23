@@ -109,6 +109,41 @@ h1 {
     justify-content: space-between;
 }
 
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 60px;
+    position: relative;
+    isolation: isolate;
+}
+
+.category-header::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(19, 28, 36);
+    box-shadow: 0 0 0 100vmax rgb(19, 28, 36);
+    clip-path: inset(0 -100vmax);
+    z-index: -1;
+}
+
+h2 {
+    font-size: clamp(32px, 3vw, 40px);
+    transform: translateY(10px);
+}
+
+.dish-section {
+    gap: 40px;
+}
+
+.category-section {
+    gap: 40px;
+}
+
 .dish-list {
     gap: 20px;
 }
@@ -134,7 +169,7 @@ h1 {
     gap: 15px;
 }
 
-.dish-description > h2,
+.dish-description > h3,
 .price-div > p {
     font-size: clamp(22px, 2vw, 24px);
     font-weight: 600;
