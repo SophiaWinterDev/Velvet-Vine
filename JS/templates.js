@@ -79,7 +79,7 @@ function getHTMLForSummary() {
             <p>${calculateTotal().toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
         </li>
     </ul>
-    <button class="buy-button">
+    <button class="buy-button" onclick="openConfirmationDialog(), clearBasket()">
         Buy now (${calculateTotal().toLocaleString("de-DE", { style: "currency", currency: "EUR" })})
     </button>`;
 }

@@ -19,7 +19,11 @@
         align-items: center;
     }
 
-    dialog > header {
+    dialog::backdrop {
+        background-color: rgb(0, 0, 0, 0.5);
+    }
+
+    .basket > header {
         width: 100%;
         text-align: center;
         position: relative;
@@ -44,7 +48,7 @@
 
     .basket {
         position: fixed;
-        bottom: 68px;
+        bottom: 71px;
         left: 15%;
         right: 15%;
         top: 50px;
@@ -54,9 +58,6 @@
         padding: 20px 30px;
         margin: 0;
         width: 70%;
-    }
-
-    .basket-open {
     }
 
     .empty-basket > img {

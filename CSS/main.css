@@ -37,7 +37,7 @@ footer {
     background-position: center;
 }
 
-main {
+.main {
     flex: 1;
     gap: 40px;
 }

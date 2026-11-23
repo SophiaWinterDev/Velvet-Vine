@@ -28,7 +28,7 @@
             /></a>
             <button class="menu-button" aria-label="Open menu"></button>
         </header>
-        <main class="column">
+        <main class="column main">
             <section class="landing-section column">
                 <img
                     class="background-img"
@@ -55,13 +55,13 @@
                     <ul id="dishList" class="dish-list column"></ul>
                 </section>
                 <section class="basket-section">
-                    <dialog id="basket-dialog" class="basket">
+                    <dialog id="basketDialog" class="basket">
                         <header>
                             <h2>Your Basket</h2>
                             <button
                                 aria-label="Close Basket"
                                 class="close-basket-button"
-                                onclick="closeDialog()"
+                                onclick="closeBasketDialog()"
                             ></button>
                         </header>
                         <ul id="basketContent" class="order-list column"></ul>
@@ -72,6 +72,20 @@
                     </dialog>
                 </section>
             </section>
+            <dialog id="confirmationDialog" class="confirmation-dialog">
+                <header>
+                    <button
+                        aria-label="Close confirmation message"
+                        class="close-button"
+                        onclick="closeConfirmationDialog()"
+                    ></button>
+                </header>
+                <main>
+                    <img src="./assets/icon/delivery.png" alt="" />
+                    <h3>Order confirmed!</h3>
+                    <p>Your food is on the way!</p>
+                </main>
+            </dialog>
         </main>
         <footer class="main-padding">
             <div class="copyright-logo">
@@ -102,7 +116,7 @@
                 <li class="cart-button-wrapper">
                     <button
                         class="cart-button nav-button"
-                        onclick="openDialog()"
+                        onclick="openBasketDialog()"
                     ></button>
                     <p id="cartAmountBubble">0</p>
                 </li>

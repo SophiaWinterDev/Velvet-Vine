@@ -42,6 +42,13 @@ function showEmptyBasket() {
     BASKET_SUMMARY_REF.innerHTML = "";
 }
 
+function clearBasket() {
+    for (let index = 0; index < dishes.length; index++) {
+        dishes[index].amount = 0;
+    }
+    renderBasket();
+}
+
 function addDishToBasket(index) {
     dishes[index].amount++;
     renderBasket();
@@ -88,16 +95,29 @@ function calculateCartAmount() {
 }
 
 // #region Dialog
-function openDialog() {
-    document.getElementById("basket-dialog").showModal();
+function openBasketDialog() {
+    document.getElementById("basketDialog").showModal();
     lockScroll();
     document
-        .getElementById("basket-dialog")
+        .getElementById("basketDialog")
         .addEventListener("close", unlockScroll, { once: true });
 }
 
-function closeDialog() {
-    document.getElementById("basket-dialog").close();
+function closeBasketDialog() {
+    document.getElementById("basketDialog").close();
+}
+
+function openConfirmationDialog() {
+    document.getElementById("confirmationDialog").showModal();
+    setTimeout(closeConfirmationDialog, 5000);
+    lockScroll();
+    document
+        .getElementById("confirmationDialog")
+        .addEventListener("close", unlockScroll, { once: true });
+}
+
+function closeConfirmationDialog() {
+    document.getElementById("confirmationDialog").close();
 }
 
 function lockScroll() {
