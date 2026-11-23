@@ -29,6 +29,7 @@ function renderBasket() {
     if (isEmpty) {
         showEmptyBasket();
     }
+    calculateCartAmount();
 }
 
 function renderSummary() {
@@ -44,19 +45,16 @@ function showEmptyBasket() {
 function addDishToBasket(index) {
     dishes[index].amount++;
     renderBasket();
-    calculateCartAmount(index);
 }
 
 function deleteDishFromBasket(index) {
     dishes[index].amount = 0;
     renderBasket();
-    calculateCartAmount(index);
 }
 
 function decreaseAmount(index) {
     dishes[index].amount--;
     renderBasket();
-    calculateCartAmount(index);
 }
 
 function calculateDishPrices(index) {
@@ -81,10 +79,11 @@ function calculateTotal() {
     return sum;
 }
 
-function calculateCartAmount(index) {
+function calculateCartAmount() {
     let amount = 0;
-    amount += dishes[index].amount;
-    document.getElementById("cartAmountBubble").innerText = "";
+    for (let index = 0; index < dishes.length; index++) {
+        amount += dishes[index].amount;
+    }
     document.getElementById("cartAmountBubble").innerText = amount;
 }
 
