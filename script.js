@@ -1,7 +1,6 @@
 const BASKET_CONTENT_REF = document.getElementById("basketContent");
 const BASKET_SUMMARY_REF = document.getElementById("basketSummary");
 let deliveryFee = 2.99;
-let categories = [];
 
 function init() {
     renderCategories();
@@ -11,6 +10,7 @@ function init() {
 }
 
 function renderCategories() {
+    let categories = [];
     document.getElementById("dishSection").innerHTML = "";
     for (let index = 0; index < dishes.length; index++) {
         let category = dishes[index].category;
@@ -59,6 +59,8 @@ function showEmptyBasket() {
 function clearBasket() {
     for (let index = 0; index < dishes.length; index++) {
         dishes[index].amount = 0;
+        document.getElementById(`addDishButton-${index}`).innerText =
+            getTextForAddButton();
     }
     renderBasket();
 }
@@ -118,6 +120,12 @@ function calculateCartAmount() {
     document.getElementById("cartAmountBubble").innerText = amount;
 }
 
+function buyNow() {
+    closeBasketDialog();
+    clearBasket();
+    openConfirmationDialog();
+}
+
 // #region Dialog
 function openBasketDialog() {
     document.getElementById("basketDialog").showModal();
@@ -145,6 +153,7 @@ function closeConfirmationDialog() {
 }
 
 function lockScroll() {
+    if (document.body.style.position === "fixed") return;
     scrollPosition = window.scrollY;
     document.body.style.position = "fixed";
     document.body.style.top = `-${scrollPosition}px`;

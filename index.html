@@ -24,7 +24,9 @@
     <body class="column" onload="init()">
         <header class="main-padding header">
             <a href="./index.html"
-                ><img src="./assets/icon/logo-name-short.png" alt="Logo V & V"
+                ><img
+                    src="./assets/icon/logo-name-short.png"
+                    alt="Velvet & Vine — Home"
             /></a>
             <button class="menu-button" aria-label="Open menu"></button>
         </header>
@@ -33,9 +35,9 @@
                 <img
                     class="background-img"
                     src="./assets/img/background-image.jpg"
-                    alt="Logo"
+                    alt=""
                 />
-                <img class="logo-img" src="./assets/icon/logo.png" alt="Logo" />
+                <img class="logo-img" src="./assets/icon/logo.png" alt="" />
                 <div class="landing-text">
                     <div class="headline-div">
                         <h1>Velvet & Vine</h1>
@@ -49,6 +51,22 @@
                     </div>
                     <p>A little taste of Italy, wherever you are.</p>
                 </div>
+            </section>
+            <section class="main-padding">
+                <ul class="category-list">
+                    <li>
+                        <a href="#categoryStarters">Starters</a>
+                    </li>
+                    <li>
+                        <a href="#categoryPasta">Pasta</a>
+                    </li>
+                    <li>
+                        <a href="#categoryPizza">Pizza</a>
+                    </li>
+                    <li>
+                        <a href="#categoryDesserts">Desserts</a>
+                    </li>
+                </ul>
             </section>
             <section class="menu-section menu-padding">
                 <section id="dishSection" class="dish-section column"></section>
@@ -101,19 +119,28 @@
         <nav>
             <ul>
                 <li>
-                    <a href="./index.html"
-                        ><button class="home-button nav-button"></button
+                    <a
+                        href="./index.html"
+                        class="home-button nav-button"
+                        aria-label="Home"
                     ></a>
                 </li>
                 <li>
-                    <button class="profile-button nav-button"></button>
+                    <button
+                        class="profile-button nav-button"
+                        aria-label="Profile"
+                    ></button>
                 </li>
                 <li>
-                    <button class="takeout-button nav-button"></button>
+                    <button
+                        class="takeout-button nav-button"
+                        aria-label="Takeout"
+                    ></button>
                 </li>
                 <li class="cart-button-wrapper">
                     <button
                         class="cart-button nav-button"
+                        aria-label="Open basket"
                         onclick="openBasketDialog()"
                     ></button>
                     <p id="cartAmountBubble">0</p>

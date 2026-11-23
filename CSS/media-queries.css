@@ -79,6 +79,8 @@
 
     .home-button {
         background-image: url(../assets/icon/home.png);
+        width: 28px;
+        height: 28px;
     }
 
     .home-button:active,
@@ -196,5 +198,9 @@
 
     .background-img {
         border-radius: 15px;
+    }
+
+    .category-header {
+        padding: 0 20px;
     }
 }

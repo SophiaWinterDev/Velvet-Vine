@@ -14,7 +14,7 @@ function getHTMLForDish(index) {
             </div>
             <div class="price-div column">
                 <p>${dishes[index].price.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
-                <button id="addDishButton-${index}" onclick="addDishToBasket(${index})">Add to basket</button>
+                <button id="addDishButton-${index}" onclick="addDishToBasket(${index})" aria-label="Add ${dishes[index].name} to basket">Add to basket</button>
             </div>
         </div>
     </li>`;
@@ -39,18 +39,18 @@ function getHTMLForDishOrder(index) {
     <li class="dish-order column">
         <div class="dish-order-top">
             <p>${dishes[index].amount} x ${dishes[index].name}</p>
-            <button class="delete-button" onclick="deleteDishFromBasket(${index})"></button>
+            <button class="delete-button" onclick="deleteDishFromBasket(${index})" aria-label="Remove ${dishes[index].name} from basket"></button>
         </div>
         <div class="dish-order-bottom">
             <div class="dish-amount">
-                <button onclick="decreaseAmount(${index})">
+                <button onclick="decreaseAmount(${index})" aria-label="Decrease quantity of ${dishes[index].name}">
                     <img
                         src="./assets/icon/remove.png"
                         alt="Remove-Icon"
                     />
                 </button>
                 <p>${dishes[index].amount}</p>
-                <button onclick="addDishToBasket(${index})">
+                <button onclick="addDishToBasket(${index})" aria-label="Increase quantity of ${dishes[index].name}">
                     <img
                         src="./assets/icon/add.png"
                         alt="Add-Icon"
@@ -79,7 +79,7 @@ function getHTMLForSummary() {
             <p>${calculateTotal().toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
         </li>
     </ul>
-    <button class="buy-button" onclick="openConfirmationDialog(), clearBasket()">
+    <button class="buy-button" onclick="buyNow()">
         Buy now (${calculateTotal().toLocaleString("de-DE", { style: "currency", currency: "EUR" })})
     </button>`;
 }
@@ -94,7 +94,7 @@ function getTextForAddButton() {
 
 function getHTMLForCategories(category) {
     return `
-    <section class="category-${category} category-section column">
+    <section id="category${category}" class="category-${category} category-section column">
         <div class="category-header">
             <img src="./assets/icon/${category}.png" alt="">
             <h2>${category}</h2>

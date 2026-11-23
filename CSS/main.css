@@ -109,6 +109,29 @@ h1 {
     justify-content: space-between;
 }
 
+.category-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-list a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(19, 28, 36);
+    padding: 5px 25px;
+    border-radius: 30px;
+    font-size: 24px;
+    width: 140px;
+}
+
+.category-list a:hover {
+    outline: 2px solid var(--action-color);
+}
+
 .category-header {
     display: flex;
     align-items: center;
