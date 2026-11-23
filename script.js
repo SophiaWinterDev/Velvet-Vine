@@ -56,6 +56,12 @@ function decreaseAmount(index) {
     renderBasket();
 }
 
+function calculateDishPrices(index) {
+    let sum = 0;
+    sum = dishes[index].price * dishes[index].amount;
+    return sum;
+}
+
 function calculateSubtotal() {
     let sum = 0;
     for (let index = 0; index < dishes.length; index++) {

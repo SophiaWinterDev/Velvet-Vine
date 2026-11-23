@@ -57,7 +57,7 @@ function getHTMLForDishOrder(index) {
                     />
                 </button>
             </div>
-            <p>${dishes[index].price.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
+            <p>${calculateDishPrices(index).toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
         </div>
     </li>`;
 }
