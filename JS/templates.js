@@ -38,19 +38,19 @@ function getHTMLForDishOrder(index) {
     return `
     <li class="dish-order column">
         <div class="dish-order-top">
-            <p>1 x ${dishes[index].name}</p>
-            <button class="delete-button"></button>
+            <p>${dishes[index].amount} x ${dishes[index].name}</p>
+            <button class="delete-button" onclick="deleteDishFromBasket(${index})"></button>
         </div>
         <div class="dish-order-bottom">
             <div class="dish-amount">
-                <button>
+                <button onclick="decreaseAmount(${index})">
                     <img
                         src="./assets/icon/remove.png"
                         alt="Remove-Icon"
                     />
                 </button>
-                <p>1</p>
-                <button>
+                <p>${dishes[index].amount}</p>
+                <button onclick="addDishToBasket(${index})">
                     <img
                         src="./assets/icon/add.png"
                         alt="Add-Icon"

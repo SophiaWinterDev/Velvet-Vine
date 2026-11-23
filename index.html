@@ -22,7 +22,7 @@
         <script defer src="./script.js"></script>
     </head>
     <body class="column" onload="init()">
-        <header class="main-padding">
+        <header class="main-padding header">
             <a href="./index.html"
                 ><img src="./assets/icon/logo-name-short.png" alt="Logo V & V"
             /></a>
@@ -55,14 +55,17 @@
                     <ul id="dishList" class="dish-list column"></ul>
                 </section>
                 <section class="basket-section">
-                    <div class="basket column d-none">
-                        <h2>Your Basket</h2>
+                    <dialog id="basket-dialog" class="basket">
+                        <header>
+                            <h2>Your Basket</h2>
+                            <button aria-label="Close Basket" class="close-basket-button" onclick="closeDialog()"></button>
+                        </header>
                         <ul id="basketContent" class="order-list column"></ul>
                         <div
                             id="basketSummary"
                             class="basket-summary column"
                         ></div>
-                    </div>
+                    </dialog>
                 </section>
             </section>
         </main>
@@ -93,7 +96,7 @@
                     <button class="takeout-button nav-button"></button>
                 </li>
                 <li>
-                    <button class="cart-button nav-button"></button>
+                    <button class="cart-button nav-button" onclick="openDialog()"></button>
                 </li>
             </ul>
         </nav>

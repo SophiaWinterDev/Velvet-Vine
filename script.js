@@ -6,6 +6,7 @@ let deliveryFee = 2.99;
 function init() {
     renderDishes();
     renderBasket();
+    window.addEventListener("resize", checkWindowWidth);
 }
 
 function renderDishes() {
@@ -45,6 +46,16 @@ function addDishToBasket(index) {
     renderBasket();
 }
 
+function deleteDishFromBasket(index) {
+    dishes[index].amount = 0;
+    renderBasket();
+}
+
+function decreaseAmount(index) {
+    dishes[index].amount--;
+    renderBasket();
+}
+
 function calculateSubtotal() {
     let sum = 0;
     for (let index = 0; index < dishes.length; index++) {
@@ -59,4 +70,36 @@ function calculateTotal() {
     let sum = 0;
     sum = deliveryFee + calculateSubtotal();
     return sum;
+}
+
+function openDialog() {
+    document.getElementById("basket-dialog").showModal();
+    lockScroll();
+    document
+        .getElementById("basket-dialog")
+        .addEventListener("close", unlockScroll, { once: true });
+}
+
+function closeDialog() {
+    document.getElementById("basket-dialog").close();
+}
+
+function lockScroll() {
+    scrollPosition = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = "100%";
+}
+
+function unlockScroll() {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
+    window.scrollTo(0, scrollPosition);
+}
+
+function checkWindowWidth() {
+    if (window.innerWidth >= 1000) {
+        closeDialog();
+    }
 }

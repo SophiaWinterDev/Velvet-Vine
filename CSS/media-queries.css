@@ -28,7 +28,7 @@
         padding: 20px 60px;
     }
 
-    header > button {
+    .header > button {
         display: none;
     }
 
