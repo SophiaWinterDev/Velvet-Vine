@@ -14,7 +14,7 @@ function getHTMLForDish(index) {
             </div>
             <div class="price-div column">
                 <p>${dishes[index].price.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}</p>
-                <button onclick="addDishToBasket(${index})">Add to basket</button>
+                <button id="addDishButton-${index}" onclick="addDishToBasket(${index})">Add to basket</button>
             </div>
         </div>
     </li>`;
