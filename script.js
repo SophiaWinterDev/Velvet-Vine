@@ -1,6 +1,5 @@
 const BASKET_CONTENT_REF = document.getElementById("basketContent");
 const BASKET_SUMMARY_REF = document.getElementById("basketSummary");
-let deliveryFee = 2.99;
 
 function init() {
     renderCategories();
@@ -107,6 +106,7 @@ function calculateSubtotal() {
 }
 
 function calculateTotal() {
+    let deliveryFee = 2.99;
     let sum = 0;
     sum = deliveryFee + calculateSubtotal();
     return sum;
