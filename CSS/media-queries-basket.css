@@ -105,3 +105,24 @@
         bottom: 0;
     }
 }
+
+@media screen and (max-height: 500px) {
+    .basket {
+        max-height: 100dvh;
+    }
+
+    .basket[open] {
+        gap: 10px;
+    }
+
+    .basket-summary {
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .order-list {
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-y: auto;
+    }
+}
