@@ -38,7 +38,7 @@ function getHTMLForDishOrder(index) {
     return `
     <li class="dish-order column">
         <div class="dish-order-top">
-            <p>${dishes[index].amount} x ${dishes[index].name}</p>
+            <p class="dish-text">${dishes[index].amount} x ${dishes[index].name}</p>
             <button class="delete-button" onclick="deleteDishFromBasket(${index})" aria-label="Remove ${dishes[index].name} from basket"></button>
         </div>
         <div class="dish-order-bottom">
@@ -49,7 +49,7 @@ function getHTMLForDishOrder(index) {
                         alt="Remove-Icon"
                     />
                 </button>
-                <p>${dishes[index].amount}</p>
+                <p class="amount-text">${dishes[index].amount}</p>
                 <button onclick="addDishToBasket(${index})" aria-label="Increase quantity of ${dishes[index].name}">
                     <img
                         src="./assets/icon/add.png"

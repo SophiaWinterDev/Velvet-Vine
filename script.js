@@ -129,10 +129,6 @@ function buyNow() {
 // #region Dialog
 function openBasketDialog() {
     document.getElementById("basketDialog").showModal();
-    lockScroll();
-    document
-        .getElementById("basketDialog")
-        .addEventListener("close", unlockScroll, { once: true });
 }
 
 function closeBasketDialog() {
@@ -141,35 +137,20 @@ function closeBasketDialog() {
 
 function openConfirmationDialog() {
     document.getElementById("confirmationDialog").showModal();
-    setTimeout(closeConfirmationDialog, 5000);
-    lockScroll();
-    document
-        .getElementById("confirmationDialog")
-        .addEventListener("close", unlockScroll, { once: true });
+    setTimeout(closeConfirmationDialog, 3000);
 }
 
 function closeConfirmationDialog() {
     document.getElementById("confirmationDialog").close();
 }
 
-function lockScroll() {
-    if (document.body.style.position === "fixed") return;
-    scrollPosition = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = "100%";
-}
-
-function unlockScroll() {
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.width = "";
-    window.scrollTo(0, scrollPosition);
-}
-
 function checkWindowWidth() {
     if (window.innerWidth >= 1000) {
         closeBasketDialog();
     }
+}
+
+function bubblingPrevention(event) {
+    event.stopPropagation();
 }
 // #endregion

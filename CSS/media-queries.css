@@ -13,20 +13,20 @@
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1279px) {
+@media screen and (min-width: 1065px) and (max-width: 1279px) {
     .main-padding,
     .dish-section {
         padding: 20px 30px;
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1065px) {
     nav {
         display: none;
     }
 }
 
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1064px) {
     .main-padding,
     .dish-section {
         padding: 20px 60px;

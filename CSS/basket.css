@@ -79,9 +79,17 @@
     color: var(--primary-bg-color);
     font-weight: 700;
     font-size: 20px;
-    text-align: start;
     line-height: 24px;
+}
+
+.dish-text {
     min-width: 0px;
+    text-align: start;
+}
+
+.amount-text {
+    min-width: 25px;
+    text-align: center;
 }
 
 .dish-order-top,
@@ -151,7 +159,7 @@
 
 .buy-button {
     font-weight: 700;
-    font-size: clamp(22px, 2vw, 32px);
+    font-size: clamp(20px, 2.5vw, 26px);
     color: var(--primary-bg-color);
     background-color: var(--action-color);
     padding: 10px 30px;

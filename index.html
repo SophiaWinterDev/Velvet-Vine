@@ -71,8 +71,12 @@
             <section class="menu-section menu-padding">
                 <section id="dishSection" class="dish-section column"></section>
                 <section class="basket-section">
-                    <dialog id="basketDialog" class="basket">
-                        <header>
+                    <dialog
+                        id="basketDialog"
+                        class="basket"
+                        onclick="closeBasketDialog()"
+                    >
+                        <header onclick="bubblingPrevention(event)">
                             <h3>Your Basket</h3>
                             <button
                                 aria-label="Close Basket"
@@ -80,23 +84,32 @@
                                 onclick="closeBasketDialog()"
                             ></button>
                         </header>
-                        <ul id="basketContent" class="order-list column"></ul>
+                        <ul
+                            id="basketContent"
+                            class="order-list column"
+                            onclick="bubblingPrevention(event)"
+                        ></ul>
                         <div
                             id="basketSummary"
                             class="basket-summary column"
+                            onclick="bubblingPrevention(event)"
                         ></div>
                     </dialog>
                 </section>
             </section>
-            <dialog id="confirmationDialog" class="confirmation-dialog">
-                <header>
+            <dialog
+                id="confirmationDialog"
+                class="confirmation-dialog"
+                onclick="closeConfirmationDialog()"
+            >
+                <header onclick="bubblingPrevention(event)">
                     <button
                         aria-label="Close confirmation message"
                         class="close-button"
                         onclick="closeConfirmationDialog()"
                     ></button>
                 </header>
-                <main>
+                <main onclick="bubblingPrevention(event)">
                     <img src="./assets/icon/delivery.png" alt="" />
                     <h3>Order confirmed!</h3>
                     <p>Your food is on the way!</p>
