@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Orders</title>
+        <link
+            rel="shortcut icon"
+            href="../assets/icon/logo.png"
+            type="image/x-icon"
+        />
+
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../CSS/fonts.css" />
+        <link rel="stylesheet" href="../CSS/variables.css" />
+        <link rel="stylesheet" href="../CSS/main.css" />
+        <link rel="stylesheet" href="../CSS/media-queries.css" />
+        <script defer src="../JS/dishes.js"></script>
+        <script defer src="../JS/templates.js"></script>
+        <script defer src="../script.js"></script>
+    </head>
+    <body class="column">
+        <header class="main-padding header">
+            <a href="../index.html"
+                ><img
+                    src="../assets/icon/logo-name-short.png"
+                    alt="Velvet & Vine — Home"
+            /></a>
+            <a class="orders-link" href="../HTML/order-history.html"
+                >My Orders</a
+            >
+        </header>
+        <main class="column main"></main>
+        <footer class="main-padding">
+            <div class="copyright-logo">
+                <p>© 2026</p>
+                <img
+                    src="../assets/icon/logo-name-full.png"
+                    alt="Logo Velvet & Vine"
+                />
+            </div>
+            <ul class="footer-links">
+                <li><a href="../HTML/imprint.html">Imprint</a></li>
+                <li><a href="">Cookie Preferences</a></li>
+            </ul>
+        </footer>
+        <nav>
+            <ul>
+                <li>
+                    <a
+                        href="../index.html"
+                        class="home-button nav-button"
+                        aria-label="Home"
+                    ></a>
+                </li>
+                <li>
+                    <button
+                        class="profile-button nav-button"
+                        aria-label="Profile"
+                    ></button>
+                </li>
+                <li>
+                    <a
+                        href="../HTML/order-history.html"
+                        class="takeout-button nav-button"
+                        aria-label="Takeout"
+                    ></a>
+                </li>
+                <li class="cart-button-wrapper">
+                    <button
+                        class="cart-button nav-button"
+                        aria-label="Open basket"
+                        onclick="openBasketDialog()"
+                    ></button>
+                    <p id="cartAmountBubble">0</p>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>

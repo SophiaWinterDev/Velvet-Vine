@@ -21,6 +21,7 @@ footer {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header img {
@@ -28,13 +29,10 @@ footer {
     display: block;
 }
 
-.menu-button {
-    width: 28px;
-    height: 28px;
-    background-image: url(../assets/icon/menu.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.orders-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 24px;
 }
 
 .main {
