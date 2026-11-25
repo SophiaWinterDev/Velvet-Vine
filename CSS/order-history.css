@@ -1,0 +1,66 @@
+h1,
+h2 {
+    font-family: var(--font-pala-dark);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 400;
+}
+
+.current-order-section,
+.order-history-section {
+    gap: 20px;
+}
+
+h3 {
+    font-size: clamp(20px, 3vw, 26px);
+}
+
+.order-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.current-order,
+.history-order {
+    width: 450px;
+    background-color: var(--secondary-bg-color);
+    padding: 20px 30px;
+    gap: 10px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.current-order img,
+.history-order img {
+    width: 100px;
+    height: 100px;
+}
+
+.order-top p,
+.order-top button {
+    font-size: clamp(18px, 3vw, 20px);
+}
+
+.order-top button,
+.order-top button {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.order-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.delivery-status-button,
+.order-again-button {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--action-color);
+    color: var(--primary-bg-color);
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: clamp(16px, 3vw, 18px);
+    font-weight: 600;
+}
